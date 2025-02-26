@@ -1,19 +1,28 @@
 <!doctype html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>Zenid Search</title>
     </head>
     <body>
         <div class="main">
             <img src="zenidsearchlogo.png" class="logo-img">
-            <input type="text" class="searchbar-input">
-            <div class="buttons">
-                <button class="btn">Search Zenid</button>
-                <button class="btn">Check Out Random</button>
+            
+
+            
+             <!-- DuckDuckGo Search Form -->
+            <form action="https://duckduckgo.com/" method="get" target="_blank">
+                <input type="text" name="q" class="searchbar-input" placeholder="Search (DuckDuckGo...)">
+                <div class="btn_container">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </form>
+            
+            <div class="text_container">
+                <p>We care about your privacy. <a href="blog.html">Learn how!</a></p>
             </div>
         </div>
-            <p>We care about your privacy. <a href="blog.html">Learn how!</a></p>
     </body>
 </html>
