@@ -1,0 +1,85 @@
+body {
+    font-family: Trebuchet MS, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    text-align: center;
+    border: 2px solid #121212;
+    border-radius: 25px;
+    max-width: 600px;
+    margin: auto; 
+    padding: 20px;
+}
+
+.heading {
+    color: #121212;
+}
+
+.img {
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+}
+
+.slogan {
+    width: auto;
+    text-align: center;
+    font-style: italic;
+    color: #121212;
+}
+
+
+.email {
+    width: 180px;
+    border: 3px solid #121212;
+    margin: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.btn {
+    background-color: #121212;
+    border: 3px solid #121212;
+    color: white;
+    width: 190px;
+    margin: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.footer {
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    font-family: arial, sans-serif
+}
+
+/* Media Queries for smaller screens */
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 24px;
+    }
+
+    .slogan {
+        font-size: 16px;
+    }
+
+    .email {
+        width: 60%;
+    }
+    
+    .btn {
+        width: 62%
+    }
+}
