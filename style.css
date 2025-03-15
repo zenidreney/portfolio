@@ -21,12 +21,12 @@ body {
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    background: #ed7209;
+    background: #ffa839;
     border-radius: 15px;
     color: #2b2839;
-    border-bottom: 6px solid #ffa839;
-    border-right: 6px solid #ffa839;
-    text-shadow: 1px 1px 1px #ffa839;
+    border-bottom: 6px solid #ed7209;
+    border-right: 6px solid #ed7209;
+    text-shadow: 1px 1px 1px #ed7209;
     
 }.links_card {
     width: 90%;
