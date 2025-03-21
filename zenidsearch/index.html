@@ -7,10 +7,11 @@
         <link rel="icon" href="./media/zenidfavicon.png">
         <title>Zenid Search</title>
     </head>
+    
     <body>
         <div class="main">
             
-            <button onclick="toggle()">Light/Dark Mode</button>
+            <button id="mode_btn" onclick="toggle()">Change Theme</button>
             
             <img src="./media/zenidsearchlogo.png" class="logo-img" id="logo">
             
@@ -28,14 +29,21 @@
                 <p>ZenidReney Web Development <a href="../index.html">See portfolio</a></p>
             </div>
         </div>
+        
+        <!--Change Theme-->
+        
         <script>
-        function toggle() {
-            let element = document.body;
-            element.classList.toggle("dark-mode")
-            
-            let image = document.getElementById("logo");
-            image.setAttribute("src", "./media/logo_inv.png")
-        }
+            function toggle() {
+                let element = document.body;
+                element.classList.toggle("dark-mode")
+
+                let image = document.getElementById("logo");
+                    if (element.classList.contains("dark-mode")) {
+                        image.setAttribute("src", "./media/logo_inv.png")
+                    } else {
+                        image.setAttribute("src", "./media/zenidsearchlogo.png")
+                    }
+            }
         </script>
     </body>
 </html>
