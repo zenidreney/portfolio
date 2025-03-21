@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,10 @@
     </head>
     <body>
         <div class="main">
-            <img src="./media/zenidsearchlogo.png" class="logo-img">
+            
+            <button onclick="toggle()">Light/Dark Mode</button>
+            
+            <img src="./media/zenidsearchlogo.png" class="logo-img" id="logo">
             
 
             
@@ -25,5 +28,14 @@
                 <p>ZenidReney Web Development <a href="../index.html">See portfolio</a></p>
             </div>
         </div>
+        <script>
+        function toggle() {
+            let element = document.body;
+            element.classList.toggle("dark-mode")
+            
+            let image = document.getElementById("logo");
+            image.setAttribute("src", "./media/logo_inv.png")
+        }
+        </script>
     </body>
 </html>
