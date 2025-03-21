@@ -16,7 +16,7 @@ body {
 }
 .info_card {
     width: 90%;
-    max-width: 400px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -34,7 +34,7 @@ body {
 .links_card {
     font-family: inherit;
     width: 90%;
-    max-width: 400px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
