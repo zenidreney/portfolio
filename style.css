@@ -1,8 +1,13 @@
 /*This is one my first vanilla css' so some code may be DRY:)*/
+@font-face {
+    src: url(Orbitron-Regular.ttf);
+    font-family: Orbitron;
+}
+
 
 body {
     margin: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Orbitron;
     background-color: #c26135;
 }
 
