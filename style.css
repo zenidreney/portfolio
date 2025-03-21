@@ -32,12 +32,14 @@ body {
 }
 
 .links_card {
+    font-family: inherit;
     width: 90%;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    text-align: center;
     background: #ed7209;
     border-radius: 15px;
     color: #2b2839;
