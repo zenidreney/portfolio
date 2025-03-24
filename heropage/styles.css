@@ -9,6 +9,7 @@ body {
     background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2hsenVzb3VmeTA5azJxZm83YngydzlmeWxkYmFlMHNnM211M2JoMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7D4dXVf92frtOGUwZq/giphy.gif");
     /*Gif from gify: Stars Glow GIF by ESA/Hubble Space Telescope*/
     background-size: cover;
+    background-position: bottom;
     padding: 10px 0 80px 0;
 }
 
