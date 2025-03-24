@@ -60,4 +60,8 @@ nav ol li:not(:last-child)::after {
         align-content: center;
         font-size: 1.5rem;
     }
+    
+    .main-img {
+        padding: 1px;
+    }
 }
