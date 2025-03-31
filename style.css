@@ -12,7 +12,6 @@ body {
     border-right: 3px solid #ffa839;
     border-radius: 15px;
     animation: fadeIn 0.5s ease-in; /* Apply animation */
-
 }
 .info_card {
     width: 90%;
@@ -28,7 +27,7 @@ body {
     color: #2b2839;
     border-bottom: 6px solid #ed7209;
     border-right: 6px solid #ed7209;
-    text-shadow: 1px 1px 1px #ed7209;   
+    text-shadow: 1px 1px 1px #ed7209;
 }
 
 .links_card {
@@ -67,10 +66,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 90%
+    width: 90%;
 }
 
-.links_card li a{
+.links_card li a {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -86,35 +85,34 @@ body {
     cursor: pointer;
 }
 
-.links_card li a:hover{
+.links_card li a:hover {
     color: violet;
 }
 
 .info {
     border-radius: 15px;
     animation: fadeIn 0.5s ease-in; /* Apply animation */
-
 }
 
 /*Media Queries*/
 
 @media (max-width: 600px) {
     .info_card {
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .links_card {
-    flex-direction: column;
-    align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .links_card p {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
-    
+
     .links_card li a {
-    font-size: 1.125rem;
+        font-size: 1.125rem;
     }
 }
 
@@ -125,7 +123,8 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
-.info:hover {transform: scale(1.05); /* Slightly enlarge the card */
+.info:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
