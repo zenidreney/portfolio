@@ -43,6 +43,7 @@ button {
     width: 200px;
     margin-bottom: 5px;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 #increment-btn {
