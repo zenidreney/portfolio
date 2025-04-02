@@ -1,6 +1,6 @@
 .container {
-    max-width: 400px;    
-    margin: 60px auto;
+    max-width: 400px;
+    margin: 160px auto;
     padding: 10px;
     background-color: rgba(59, 99, 73, 0.125);
     border: 1px solid white;
@@ -12,15 +12,15 @@
 }
 
 body {
+    box-sizing: border-box;
     background-image: url("./media/skyandmoon.jpg");
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
     height: 80%;
-    
 }
 
 h1 {
