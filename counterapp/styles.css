@@ -1,6 +1,6 @@
 .container {
     max-width: 400px;
-    margin: 160px auto;
+    margin: 10% auto;
     padding: 10px;
     background-color: rgba(59, 99, 73, 0.125);
     border: 1px solid white;
@@ -13,7 +13,7 @@
 
 body {
     box-sizing: border-box;
-    background-image: url("./media/skyandmoon.jpg");
+    background-image: url("./media/skyandclouds.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -52,12 +52,4 @@ button {
 
 #save-btn {
     background: green;
-}
-
-/*media queries*/
-
-@media (max-width: 600px) {
-    .container {
-        margin-top: 130px;
-    }
 }
