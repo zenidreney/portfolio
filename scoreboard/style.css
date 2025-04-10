@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 35.89px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #eeeeee;
+    margin-top: 0;
+}
+
+#reset {
+    font-family: Orbitron, sans-serif;
+    color: #f94f6d;
+    text-decoration: none;
+    background-color: #eeeeee;
+    border: 2px solid brown;
+    margin-top: 215px;
+    margin-bottom: 2px;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: #1b244a;
+    width: 90vh;
+    height: 50vh;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#home_scr,
+#guest_scr {
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 126.67px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #f94f6d;
+    background: #080001;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+button {
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27.81px;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 35px;
+    color: #9aabd8;
+    background: #1b244a;
+    border: 2px solid #9aabd8;
+    border-radius: 8px;
+}
