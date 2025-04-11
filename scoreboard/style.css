@@ -35,8 +35,8 @@ h3 {
     border-radius: 15px;
     background-color: #1b244a;
     width: 87%;
-    max-width: 450px;;
-  /*  height: 50vh;*/
+    max-width: 450px;
+    /*  height: 50vh;*/
     padding: 20px;
     margin: 0 auto;
 }
@@ -71,9 +71,11 @@ button {
 }
 
 @media (max-width: 431px) {
-    
     #reset {
+        margin-top: 210px;
         height: 40px;
     }
-    
+    button {
+        height: 50px;
+    }
 }
