@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #eeeeee;
 }
 
 h3 {
@@ -33,7 +34,8 @@ h3 {
     border: 3px solid white;
     border-radius: 15px;
     background-color: #1b244a;
-    width: 90%;
+    width: 87%;
+    max-width: 450px;;
   /*  height: 50vh;*/
     padding: 20px;
     margin: 0 auto;
@@ -66,4 +68,12 @@ button {
     background: #1b244a;
     border: 2px solid #9aabd8;
     border-radius: 8px;
+}
+
+@media (max-width: 431px) {
+    
+    #reset {
+        height: 40px;
+    }
+    
 }
