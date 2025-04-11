@@ -23,6 +23,7 @@ h3 {
     margin-bottom: 2px;
     padding: 8px 16px;
     border-radius: 12px;
+    height: 20px;
 }
 
 .container {
@@ -32,8 +33,8 @@ h3 {
     border: 3px solid white;
     border-radius: 15px;
     background-color: #1b244a;
-    width: 90vh;
-    height: 50vh;
+    width: 90%;
+  /*  height: 50vh;*/
     padding: 20px;
     margin: 0 auto;
 }
