@@ -1,8 +1,8 @@
-body {
-    font-family: "Oxanium", sans-serif;
+body,
+html {
     margin: 0;
-    text-align: center;
-    color: #82a5ca;
+    padding: 0;
+    height: 100%;
 }
 
 #hero {
@@ -10,12 +10,17 @@ body {
     /*Gif from gify: Stars Glow GIF by ESA/Hubble Space Telescope*/
     background-size: cover;
     background-position: bottom left;
+    text-align: center;
     font-size: 28px;
-    padding: 10px 0 60px 0;
+    padding: 150px 0 60px 0;
+    margin-bottom: 20px;
+    color: #82a5ca;
+    height: 100vh;
+    font-family: "Oxanium", sans-serif;
 }
 
 #logo {
-    width: 50px;
+    width: 80px;
     opacity: 0.5;
     margin-top: 5px;
     border-radius: 18px;
@@ -25,6 +30,7 @@ body {
 #title {
     text-shadow: 0 0 4px blue;
     letter-spacing: 3px;
+    font-size: 250%;
 }
 
 .btn {
@@ -38,4 +44,131 @@ body {
     font-weight: 600;
     font-size: 21px;
     cursor: pointer;
+    width: 20%;
+}
+
+@media (max-width: 768px) {
+    #title {
+        font-size: 130%;
+    }
+
+    .btn {
+        width: 40%;
+    }
+}
+
+/*Hero2*/
+
+#hero2 {
+    background-image: url("media/faded-office.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    height: 100vh;
+}
+
+#box2 {
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    margin: 0 0 0 23px;
+    padding: 43px 0 43px 43px;
+}
+
+#box2 h1 {
+    font-size: 400%;
+}
+
+#box2 p {
+    font-size: 200%;
+}
+
+#under_line {
+    border-bottom: 3px solid #0ea5e9;
+}
+
+#btn2 {
+    background-color: #0ea5e9;
+    border: none;
+    width: 40%;
+    margin-top: 2px;
+    padding: 8px 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+footer {
+    margin-top: 25px;
+    font-family: "Oxanium", sans-serif;
+    text-align: center;
+    color: #82a5ca;
+}
+
+@media (max-width: 480px) {
+    
+    #hero2 {
+        background-size: contain;
+    }
+    
+    #box2 {
+        padding: 0;
+    }
+    
+    #box2 h1 {
+        font-size: 85%;
+        width: 40%;
+    }
+
+    #box2 p {
+        font-size: 80%;
+        width: 40%;
+    }
+
+    #btn2 {
+        font-size: 70%;
+    }
+    
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    #hero2 {
+        background-size: contain;
+    }
+
+    #box2 h1 {
+        font-size: 125%;
+        width: 50%;
+    }
+
+    #box2 p {
+        font-size: 105%;
+        width: 50%;
+    }
+
+    #btn2 {
+        font-size: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #hero2 {
+        background-size: contain;
+    }
+
+    #box2 h1 {
+        font-size: 260%;
+        width: 50%;
+    }
+
+    #box2 p {
+        font-size: 220%;
+        width: 50%;
+    }
+
+    #btn2 {
+        width: 40%;
+        font-weight: 600;
+    }
 }
