@@ -109,41 +109,40 @@ footer {
 @media (max-width: 480px) {
     
     #hero2 {
-        background-size: contain;
-    }
-    
-    #box2 {
-        padding: 0;
+        background-size: cover;
+        background-position: center;
     }
     
     #box2 h1 {
-        font-size: 85%;
+        font-size: 175%;
         width: 40%;
     }
 
     #box2 p {
-        font-size: 80%;
+        font-size: 130%;
         width: 40%;
     }
 
     #btn2 {
-        font-size: 70%;
+        font-size: 100%;
     }
     
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
     #hero2 {
-        background-size: contain;
+        background-size: center;
+        background-position: center;
     }
 
+
     #box2 h1 {
-        font-size: 125%;
+        font-size: 175%;
         width: 50%;
     }
 
     #box2 p {
-        font-size: 105%;
+        font-size: 135%;
         width: 50%;
     }
 
@@ -154,7 +153,8 @@ footer {
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #hero2 {
-        background-size: contain;
+        background-size: center;
+        background-position: center;
     }
 
     #box2 h1 {
