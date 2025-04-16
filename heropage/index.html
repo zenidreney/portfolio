@@ -13,6 +13,18 @@
         <title>Hero Page</title>
     </head>
     <body>
+        <header>
+            <p>
+                ZenidReney Web Development <br /><span id="under_line">Hero Page Examples</span> <br />
+                All examples are responsive
+            </p>
+            <nav class="nav_list">
+                <ul>
+                    <li><a href="#hero">Example 1</a></li>
+                    <li><a href="#hero2">Example 2</a></li>
+                </ul>
+            </nav>
+        </header>
         <section id="hero">
             <img id="logo" src="../media/zenidlogospace.png" />
             <h1 id="title">Space Exploration</h1>
@@ -26,12 +38,20 @@
                     We're a group devs & designers who will help your dream
                     <span id="under_line">come true.</span>
                 </p>
-                <button id="btn2">Let's Chat</button>
+                <button id="btn2" onclick="show_alert()">Let's Chat</button>
             </div>
         </section>
         <footer>
             <h4>Zenid Reney Web Development</h4>
             <p>see <a href="../index.html">portfolio</a></p>
         </footer>
+
+        <!--Simple script for Alert-->
+
+        <script>
+            function show_alert() {
+                alert("Thank you for clicking. We will add the functionality you need here!");
+            }
+        </script>
     </body>
 </html>

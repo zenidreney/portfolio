@@ -5,6 +5,41 @@ html {
     height: 100%;
 }
 
+/*Navbar*/
+
+header {
+    height: 30vh;
+    width: 35vh;
+    font-family: "Oxanium", sans-serif;
+    font-size: x-large;
+    line-height: 1.5;
+    margin: 35px 0 0 20px;
+    text-align: left;
+}
+
+.nav_list {
+    box-sizing: border-box;
+    position: fixed;
+    border: 1px solid #82a5ca;
+    background-color: #82a5ca;
+
+    opacity: 0.75;
+    width: 15vh;
+    border-radius: 5px;
+    /*    padding: 5px 12px;*/
+    top: 40px;
+    right: 20px;
+}
+
+.nav_list ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    font-size: 18px;
+}
+
+/*Hero1*/
+
 #hero {
     background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2hsenVzb3VmeTA5azJxZm83YngydzlmeWxkYmFlMHNnM211M2JoMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7D4dXVf92frtOGUwZq/giphy.gif");
     /*Gif from gify: Stars Glow GIF by ESA/Hubble Space Telescope*/
@@ -85,6 +120,7 @@ html {
 }
 
 #under_line {
+    color: #0ea5e9;
     border-bottom: 3px solid #0ea5e9;
 }
 
@@ -97,6 +133,7 @@ html {
     color: white;
     font-weight: bold;
     font-size: 120%;
+    cursor: pointer;
 }
 
 footer {
@@ -107,12 +144,11 @@ footer {
 }
 
 @media (max-width: 480px) {
-    
     #hero2 {
         background-size: cover;
         background-position: center;
     }
-    
+
     #box2 h1 {
         font-size: 175%;
         width: 40%;
@@ -126,7 +162,6 @@ footer {
     #btn2 {
         font-size: 100%;
     }
-    
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
@@ -134,7 +169,6 @@ footer {
         background-size: center;
         background-position: center;
     }
-
 
     #box2 h1 {
         font-size: 175%;
