@@ -156,6 +156,11 @@ footer {
         background-size: cover;
         background-position: center;
     }
+    
+    #box2 {
+        margin: 0;
+        padding: 10px;
+    }
 
     #box2 h1 {
         font-size: 175%;
