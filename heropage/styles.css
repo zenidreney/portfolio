@@ -22,13 +22,17 @@ header {
     position: fixed;
     border: 1px solid #82a5ca;
     background-color: #82a5ca;
-
     opacity: 0.75;
     width: 15vh;
     border-radius: 5px;
-    /*    padding: 5px 12px;*/
     top: 40px;
     right: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav_list {
+        right: 12%;
+    }
 }
 
 .nav_list ul {
