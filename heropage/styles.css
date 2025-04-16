@@ -30,6 +30,10 @@ header {
 }
 
 @media (max-width: 768px) {
+    header {
+        height: 45vh;
+    }
+    
     .nav_list {
         right: 12%;
     }
