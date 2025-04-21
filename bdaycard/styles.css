@@ -61,7 +61,7 @@ h1, h2, h3, h4, p {
     border: 6px solid #f9cb72;
     border-radius: 10px;
     background-image: url("media/bday-box.png");
-    background-size: cover;
+    background-size: contain;
     cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ h1, h2, h3, h4, p {
 
 #footer {
     font-style: italic;
-    width: 400px;
+    max-width: 400px;
     margin: 40px auto 20px;
 }
 
