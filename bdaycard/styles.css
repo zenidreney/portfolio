@@ -52,6 +52,7 @@ h1, h2, h3, h4, p {
 
 #gift-img-cheers {
     height: 200px;
+    background-size: contain;
 }
 
 .gift-img {
@@ -61,7 +62,7 @@ h1, h2, h3, h4, p {
     border: 6px solid #f9cb72;
     border-radius: 10px;
     background-image: url("media/bday-box.png");
-    background-size: cover;
+    background-size: 100% 100%;
     cursor: pointer;
 }
 
