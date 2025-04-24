@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <title>Emoji Game</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="block">
+            <h1>Game of the Night</h1>
+            <button onclick="generate(), generateTwo()">Generate your Dream Team</button>
+            <div id="strings">
+                <p id="random-string"></p>
+                <p>VS</p>
+                <p id="random-string-2"></p>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

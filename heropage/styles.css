@@ -127,7 +127,7 @@ header {
     font-size: 200%;
 }
 
-#under_line {
+.under_line {
     color: #0ea5e9;
     border-bottom: 3px solid #0ea5e9;
 }
