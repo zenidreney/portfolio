@@ -1,3 +1,5 @@
+//CONVERTER FUNCTIONS
+
 /*
 1 meter = 3.281 feet
 1 liter = 0.264 gallon
@@ -11,10 +13,6 @@ let volumeEl = document.getElementById("volume-output");
 let massEl = document.getElementById("mass-output");
 
 console.log(lengthEl);
-
-//const mtrtoft = 3.281
-//const ltrtogall = 0.264
-//const kgtopds = 2.204
 
 button.addEventListener("click", function () {
     const value = inputEl.value;
@@ -37,4 +35,16 @@ button.addEventListener("click", function () {
     `;
 
     console.log(metertofeets);
+});
+
+// TOGGLE BUTTON FUNCTION
+
+const toggle = document.getElementById("toggle-btn-container");
+const background = document.body;
+const toggleBtn = document.getElementById("toggle-btn");
+
+toggle.addEventListener("click", function () {
+    background.classList.toggle("night-mode");
+    toggle.classList.toggle("night-mode");
+    toggleBtn.classList.toggle("night-mode");
 });

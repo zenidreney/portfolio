@@ -3,6 +3,7 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+
 #toggle-btn-container {
     position: fixed;
     top: 3px;
@@ -24,6 +25,21 @@ body {
     margin-right: 4px;
     border-radius: 20px 0;
 }
+
+.night-mode {
+    background-color: #273549;
+}
+
+#toggle-btn-container.night-mode {
+    background-color: #273549;
+    color: #ffffff;
+}
+#toggle-btn.night-mode {
+    color: #ffffff;
+    border: 2px outset #ffffff;
+}
+
+
 
 #container {
     /*    border: 3px solid #273549;*/
