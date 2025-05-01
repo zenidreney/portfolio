@@ -5,15 +5,16 @@ body {
 
 
 #toggle-btn-container {
-    position: fixed;
-    top: 3px;
-    right: 5px;
+  /*  position: fixed;*/
+    margin-top: 3px;
+    margin-right: 5px;
+    padding-bottom: 0;
     display: flex;
     gap: 20px;
-    padding: 6px;
+ /*   padding: 6px;*/
     height: 35px;
     background-color: #ffffff;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -46,7 +47,7 @@ body {
     /*    border-top-left-radius: 30px;*/
     width: 50%;
     text-align: center;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 0;
 }
 
