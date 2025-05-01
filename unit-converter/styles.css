@@ -4,17 +4,16 @@ body {
 }
 
 #container {
-    
-    border: 1px solid black;
+/*    border: 3px solid #273549;*/
+/*    border-top-left-radius: 30px;*/
     width: 50%;
     text-align: center;
     margin: 50px auto;
     padding: 0;
-    
 }
 
 .box {
- 
+    border: 3px solid #6943ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,34 +22,30 @@ body {
 }
 
 #input-ctnr {
-    
-    border: 1px solid black;
-   
-    background-color: #6943FF;
-   
-    color: #FFFFFF
-    
+    /*    border: 1px solid black;*/
 
+    background-color: #6943ff;
+    border-top-left-radius: 30px;
+
+    color: #ffffff;
 }
-
-
 
 #input-field {
     font-family: "Inter", sans-serif;
-    color: #FFFFFF;
+    color: #ffffff;
     width: 24%;
     height: 16%;
     text-align: center;
     font-size: 36px;
-    background-color: #6943FF;
-    border: 2px solid #FFFFFF;
+    background-color: #6943ff;
+    border: 2px solid #ffffff;
     border-radius: 5px;
     -moz-appearance: textfield;
     appearance: textfield;
 }
 
 #input-field::placeholder {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 #input-field::-webkit-inner-spin-button,
@@ -60,20 +55,20 @@ body {
 }
 
 #input-btn {
-    margin-top: 26px;;
+    margin-top: 26px;
     padding: 9px 28px;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 1px 2px 0 #0000000D;
-    color: #3D3D3D;
+    box-shadow: 0 1px 2px 0 #0000000d;
+    color: #3d3d3d;
     cursor: pointer;
 }
 
 #results-ctnr {
-   
- width: 100%;
-    border: 3px solid red;
+    width: 100%;
+    /*  border: 3px solid red;*/
     box-sizing: border-box;
+    border-bottom-right-radius: 30px;
 }
 
 .input-box {
@@ -83,13 +78,24 @@ body {
     background-color: #273549;
     margin: 5px;
     border-top-left-radius: 5px;
-    color: #CCC1FF;
+    color: #ccc1ff;
     font-size: 20px;
     font-weight: 600;
-
 }
 
 .input-box p {
     font-weight: 200;
     font-size: 15px;
+}
+
+/*MEDIA QUIERIES FOR SMALL SCREENS*/
+
+@media (max-width: 600px) {
+    #container {
+        width: 95vw;
+    }
+
+    .input-box {
+        width: 80vw;
+    }
 }
