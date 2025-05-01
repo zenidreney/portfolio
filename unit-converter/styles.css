@@ -3,9 +3,31 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+#toggle-btn-container {
+    position: fixed;
+    top: 3px;
+    right: 5px;
+    display: flex;
+    gap: 20px;
+    padding: 6px;
+    height: 35px;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggle-btn {
+    color: #6943ff;
+
+    border: 2px outset #6943ff;
+    padding: 4px;
+    margin-right: 4px;
+    border-radius: 20px 0;
+}
+
 #container {
-/*    border: 3px solid #273549;*/
-/*    border-top-left-radius: 30px;*/
+    /*    border: 3px solid #273549;*/
+    /*    border-top-left-radius: 30px;*/
     width: 50%;
     text-align: center;
     margin: 50px auto;
@@ -74,10 +96,10 @@ body {
 .input-box {
     width: 80%;
     height: 80%;
-    border: 1px solid blueviolet;
+    border: 3px solid #ccc1ff;
     background-color: #273549;
     margin: 5px;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 8px;
     color: #ccc1ff;
     font-size: 20px;
     font-weight: 600;
