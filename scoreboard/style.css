@@ -1,6 +1,9 @@
-body {
+body,
+html 
+{
     margin: 0;
     background-color: #eeeeee;
+   
 }
 
 h3 {
@@ -14,10 +17,8 @@ h3 {
     margin-top: 0;
 }
 
-#reset {
+#reset-container {
     font-family: Orbitron, sans-serif;
-    color: #f94f6d;
-    text-decoration: none;
     background-color: #eeeeee;
     border: 2px solid brown;
     margin-top: 215px;
@@ -27,8 +28,13 @@ h3 {
     height: 20px;
 }
 
+#reset-container a {
+    text-decoration: none;
+}
+
 .container {
     display: flex;
+    box-sizing: border-box;
     justify-content: space-around;
     text-align: center;
     border: 3px solid white;
@@ -41,11 +47,16 @@ h3 {
     margin: 0 auto;
 }
 
+.score-container {
+    width: 120px;
+}
+
 #home_scr,
 #guest_scr {
     font-family: Orbitron, sans-serif;
     font-weight: 400;
     font-size: 90px;
+    width: 120px;
     line-height: 126.67px;
     letter-spacing: 0%;
     text-align: center;
@@ -70,12 +81,21 @@ button {
     border-radius: 8px;
 }
 
-@media (max-width: 431px) {
-    #reset {
-        margin: 212px 5px 0 5px;
+@media (max-width: 446px) {
+    
+    .container {
+     width: 99vw;   
+    }
+    
+    #reset-container {
+        margin: 208px 5px 0 5px;
         height: 40px;
     }
     button {
         height: 50px;
+    }
+    
+    .score-container h3 {
+        font-size: 32px;
     }
 }
