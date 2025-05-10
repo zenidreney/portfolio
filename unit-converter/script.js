@@ -42,9 +42,14 @@ button.addEventListener("click", function () {
 const toggle = document.getElementById("toggle-btn-container");
 const background = document.body;
 const toggleBtn = document.getElementById("toggle-btn");
+const toggleText = document.getElementById("toggle-text");
 
 toggle.addEventListener("click", function () {
     background.classList.toggle("night-mode");
     toggle.classList.toggle("night-mode");
     toggleBtn.classList.toggle("night-mode");
+
+    if (toggleText.innerText === "Night Mode") {
+        toggleText.innerText = "Day Mode";
+    } else toggleText.innerText = "Night Mode";
 });
