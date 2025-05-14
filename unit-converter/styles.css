@@ -3,24 +3,27 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-
 #toggle-btn-container {
-  /*  position: fixed;*/
+    /*  position: fixed;*/
     margin-top: 3px;
     margin-right: 5px;
     padding-bottom: 0;
     display: flex;
     gap: 20px;
- /*   padding: 6px;*/
+    /*   padding: 6px;*/
     height: 35px;
     background-color: #ffffff;
     justify-content: flex-end;
     align-items: center;
 }
 
+#toggle-btn,
+#toggle-text {
+    cursor: pointer;
+}
+
 #toggle-btn {
     color: #6943ff;
-
     border: 2px outset #6943ff;
     padding: 4px;
     margin-right: 4px;
@@ -39,8 +42,6 @@ body {
     color: #ffffff;
     border: 2px outset #ffffff;
 }
-
-
 
 #container {
     /*    border: 3px solid #273549;*/
