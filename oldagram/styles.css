@@ -1,6 +1,18 @@
 html, body {
     margin: 0;
-    padding: 0;
+    padding: 0 2%;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 00;
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.mid-txt {
+    font-size: 13px;
 }
 
 .logo {
@@ -8,24 +20,53 @@ html, body {
 }
 
 .user-img {
-    width: 32px;
+    width: 34px;
     border-radius: 50%;
+}
+.avatar-img {
+    width: 34px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.icons {
+    width: 23px;
+    margin-right: 10px;
+    
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding: 0 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
 }
 
 .card-header {
     display: flex;
     align-items: center;
-    padding-left: 15px
+    /*padding-left: 15px*/
 }
 
 .image {
-    width: 95%;
-    padding: 15px;
+    width: 100%;
+    
+    padding: 15px 0;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 600px) {
+
+    body {
+        padding: 0 32%;
+        /*background-color: red;*/
+    }
 }

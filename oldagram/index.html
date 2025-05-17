@@ -3,27 +3,41 @@
     <head>
         <meta charset="UTF-8" />
         <title>Oldagram</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+            rel="stylesheet" />
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <div class="nav">
-            <img class="logo" src="media/logo.png" />
-            <img class="user-img" src="media/user-avatar.png" />
+            <img class="logo" src="media/logo.png" alt="Oldagram logo." />
+            <img class="user-img" src="media/user-avatar.jpg" alt="small picture of the user." />
         </div>
 
         <div class="card">
             <div class="card-header">
-                <img class="user-img" src="media/avatar-vangogh.jpg" />
+                <img class="avatar-img" src="media/avatar-vangogh.jpg" alt="avatar of the sender of the post." />
                 <div>
-                    <div><span class="name">Vincent Van Gogh</span></div>
+                    <div><span class="bold">Vincent Van Gogh</span></div>
                     <span class="location">Zundert, Netherlands</span>
                 </div>
             </div>
-            
+
             <div>
-                <img class="image" src="media/post-vangogh.jpg">
+                <img class="image" src="media/post-vangogh.jpg" />
             </div>
-            
+
+            <div class="btns-container">
+                <div class="icon-btns">
+                    <img class="icons" src="media/icon-heart.png" alt="" />
+                    <img class="icons" src="media/icon-comment.png" alt="" />
+                    <img class="icons" src="media/icon-dm.png" alt="" />
+                </div>
+                <p class="bold">21,492 likes</p>
+                <p><span class="bold">vincey1853</span> <span class="mid-txt">everything is whriling!</span></p>
+            </div>
         </div>
     </body>
 </html>
