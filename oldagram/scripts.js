@@ -1,4 +1,4 @@
-const posts = [
+let posts = [
     {
         name: "Vincent van Gogh",
         username: "vincey1853",
@@ -28,9 +28,11 @@ const posts = [
     }
 ];
 
+/*DISPLAYING THE CONTENT BASED ON THE ARRAY*/
+
 let card = document.getElementById("post-container");
 
-console.log(card);
+//console.log(card);
 
 for (let i = 0; i < posts.length; i++) {
     card.innerHTML += `<div id="post-container" class="card">
@@ -48,14 +50,32 @@ for (let i = 0; i < posts.length; i++) {
 
             <div class="btns-container">
                 <div class="icon-btns">
-                    <img class="icons" src="media/icon-heart.png" alt="" />
+                    <img id="heart" class="icons" src="media/icon-heart.png" alt="" />
                     <img class="icons" src="media/icon-comment.png" alt="" />
                     <img class="icons" src="media/icon-dm.png" alt="" />
                 </div>
-                <p class="bold">${posts[i].likes} likes</p>
+                <p id="likes-para" class="bold">${posts[i].likes} likes</p>
                 <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
             </div>
         </div>`;
 }
 
+/*ADD LIKE FUNCTIONALITU*/
+
+const likesText = document.getElementById("likes-para");
+let icon = document.getElementById("heart");
+   let likes = posts[0].likes;
+
+console.log(likesText);
+
+icon.onclick = function() {
+    
+ 
+    likes++;
+    likesText.innerHTML = likes + " likes";
+    
+
+                      };
+
+    console.log(likes);
 

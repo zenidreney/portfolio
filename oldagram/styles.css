@@ -6,6 +6,7 @@ html, body {
     font-size: 12px;
 }
 
+
 .bold {
     font-weight: 700;
     font-size: 13px;
@@ -32,8 +33,20 @@ html, body {
 .icons {
     width: 23px;
     margin-right: 10px;
+    clip-path: circle(100%);
+    transition: clip-path 10s;
+    cursor: pointer;
     
 }
+
+.icons:hover,
+.icons:focus {
+   background-color: brown;
+    border-radius: 25px;
+    clip-path: circle(10%);
+    transition: clip-path 1s;
+} 
+
 
 .nav {
     display: flex;
