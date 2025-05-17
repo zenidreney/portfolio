@@ -60,22 +60,27 @@ for (let i = 0; i < posts.length; i++) {
         </div>`;
 }
 
-/*ADD LIKE FUNCTIONALITU*/
+/*ADD LIKE FUNCTIONALITY
+ *
+ *
+ * It only works for the first heart,
+ * to be fixed so that each button inreases its respective like text.
+ *
+ *
+ * */
 
 const likesText = document.getElementById("likes-para");
 let icon = document.getElementById("heart");
-   let likes = posts[0].likes;
+let likes = posts[0].likes;
 
-console.log(likesText);
+//console.log(likesText);
 
-icon.onclick = function() {
-    
- 
-    likes++;
-    likesText.innerHTML = likes + " likes";
-    
+if (posts[0]) {
+    icon.onclick = function () {
+        likes++;
+        likesText.innerHTML = likes + " likes";
+        alert("You have added a like :)))");
+    };
+}
 
-                      };
-
-    console.log(likes);
-
+console.log(likes);
