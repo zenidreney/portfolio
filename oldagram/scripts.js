@@ -38,7 +38,7 @@ for (let i = 0; i < posts.length; i++) {
                 <img class="avatar-img" src=${posts[i].avatar} alt="avatar of the sender of the post." />
                 <div>
                     <div><span class="bold">${posts[i].name}</span></div>
-                    <span class="location">${posts[i].location}/span>
+                    <span class="location">${posts[i].location}</span>
                 </div>
             </div>
 
