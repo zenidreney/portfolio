@@ -50,15 +50,29 @@ for (let i = 0; i < posts.length; i++) {
 
             <div class="btns-container">
                 <div class="icon-btns">
-                    <img id="heart" class="icons" src="media/icon-heart.png" alt="" />
+                    <img id="heart-${i}" class="icons" src="media/icon-heart.png" alt="" />
                     <img class="icons" src="media/icon-comment.png" alt="" />
                     <img class="icons" src="media/icon-dm.png" alt="" />
                 </div>
-                <p id="likes-para" class="bold">${posts[i].likes} likes</p>
+                <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
                 <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
             </div>
         </div>`;
 }
+
+
+for (let i = 0; i < posts.length; i++) {
+    let icon = document.getElementById(`heart-${i}`);
+    let likesText = document.getElementById(`likes-para-${i}`);
+    
+    icon.addEventListener("click", function(){
+        posts[i].likes++;
+        likesText.innerHTML = posts[i].likes + " likes";
+        
+        
+    });
+}
+
 
 /*ADD LIKE FUNCTIONALITY
  *
@@ -69,18 +83,18 @@ for (let i = 0; i < posts.length; i++) {
  *
  * */
 
-const likesText = document.getElementById("likes-para");
-let icon = document.getElementById("heart");
-let likes = posts[0].likes;
-
-//console.log(likesText);
-
-if (posts[0]) {
-    icon.onclick = function () {
-        likes++;
-        likesText.innerHTML = likes + " likes";
-        alert("You have added a like :)))");
-    };
-}
-
-console.log(likes);
+//const likesText = document.getElementById("likes-para");
+//let icon = document.getElementById("heart");
+//let likes = posts[0].likes;
+//
+////console.log(likesText);
+//
+//if (posts[0]) {
+//    icon.onclick = function () {
+//        likes++;
+//        likesText.innerHTML = likes + " likes";
+//        alert("You have added a like :)))");
+//    };
+//}
+//
+//console.log(likes);
