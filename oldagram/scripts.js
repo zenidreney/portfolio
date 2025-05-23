@@ -64,37 +64,19 @@ for (let i = 0; i < posts.length; i++) {
 for (let i = 0; i < posts.length; i++) {
     let icon = document.getElementById(`heart-${i}`);
     let likesText = document.getElementById(`likes-para-${i}`);
+    let clicked = false;
     
     icon.addEventListener("click", function(){
-        posts[i].likes++;
-        likesText.innerHTML = posts[i].likes + " likes";
+        
+        if (!clicked) {
+            posts[i].likes++;
+            likesText.innerHTML = posts[i].likes + " likes";
+            icon.src = "media/checkmarkicon.png";
+            clicked = true;
+        }
         
         
     });
 }
 
 
-/*ADD LIKE FUNCTIONALITY
- *
- *
- * It only works for the first heart,
- * to be fixed so that each button inreases its respective like text.
- *
- *
- * */
-
-//const likesText = document.getElementById("likes-para");
-//let icon = document.getElementById("heart");
-//let likes = posts[0].likes;
-//
-////console.log(likesText);
-//
-//if (posts[0]) {
-//    icon.onclick = function () {
-//        likes++;
-//        likesText.innerHTML = likes + " likes";
-//        alert("You have added a like :)))");
-//    };
-//}
-//
-//console.log(likes);

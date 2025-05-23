@@ -39,6 +39,7 @@ html, body {
     
 }
 
+/*
 .icons:hover,
 .icons:focus {
    background-color: brown;
@@ -46,6 +47,7 @@ html, body {
     clip-path: circle(10%);
     transition: clip-path 1s;
 } 
+*/
 
 
 .nav {
