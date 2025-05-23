@@ -71,8 +71,13 @@ for (let i = 0; i < posts.length; i++) {
         if (!clicked) {
             posts[i].likes++;
             likesText.innerHTML = posts[i].likes + " likes";
-            icon.src = "media/checkmarkicon.png";
+            icon.src = "media/heart-fill.svg";
             clicked = true;
+        } else {
+            posts[i].likes--;
+            likesText.innerHTML = posts[i].likes + " likes";
+            icon.src = "media/icon-heart.png";
+            clicked = false;
         }
         
         
