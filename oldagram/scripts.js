@@ -107,4 +107,21 @@ closeBtn.addEventListener("click", function(){
     console.log("clicked");
 });
 
+/*HANDLE SUBMIT COMMENT*/
+
+const commentForm = document.getElementById("comment-form");
+
+//console.log(commentForm)
+
+commentForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    
+    const commentFormData = new FormData(commentForm);
+    const name = commentFormData.get("username");
+    const userComment = commentFormData.get("message");
+    //console.log(name, userComment);
+    
+});
+
+
 
