@@ -51,7 +51,7 @@ for (let i = 0; i < posts.length; i++) {
             <div class="btns-container">
                 <div class="icon-btns">
                     <img id="heart-${i}" class="icons" src="media/icon-heart.png" alt="" />
-                    <img class="icons" src="media/icon-comment.png" alt="" />
+                    <img id="comment-${i}" class="icons" src="media/icon-comment.png" alt="" />
                     <img class="icons" src="media/icon-dm.png" alt="" />
                 </div>
                 <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
@@ -60,6 +60,7 @@ for (let i = 0; i < posts.length; i++) {
         </div>`;
 }
 
+/*INCREASE AND DECREASE LIKES TOGGLE THE ICON*/
 
 for (let i = 0; i < posts.length; i++) {
     let icon = document.getElementById(`heart-${i}`);
@@ -83,5 +84,27 @@ for (let i = 0; i < posts.length; i++) {
         
     });
 }
+
+/*ADD CLICK EVENT TO COMMENT ICON*/
+
+for (let i=0; i < posts.length; i++) {
+    let commentBtn = document.getElementById(`comment-${i}`);
+    //console.log(commentBtn)
+    commentBtn.addEventListener("click", function(){
+        document.getElementById("modal").style.display = "inline";
+    });
+    
+    
+}
+
+/*CLOSE THE COMMENT BOX*/
+
+const closeBtn = document.getElementById("close-btn");
+
+closeBtn.addEventListener("click", function(){
+    
+    document.getElementById("modal").style.display = "none";
+    console.log("clicked");
+});
 
 
