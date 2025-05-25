@@ -130,7 +130,7 @@ for (let i = 0; i < posts.length; i++) {
 
     closeBtn.addEventListener("click", function () {
         document.getElementById(`modal-${i}`).style.display = "none";
-        console.log("clicked");
+        //console.log("clicked");
     });
 }
 
