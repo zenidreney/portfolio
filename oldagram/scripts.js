@@ -1,4 +1,4 @@
-let posts = [
+const posts = [
     {
         name: "Vincent van Gogh",
         username: "vincey1853",
@@ -30,7 +30,7 @@ let posts = [
 
 /*DISPLAYING THE CONTENT BASED ON THE ARRAY*/
 
-let card = document.getElementById("post-container");
+const card = document.getElementById("post-container");
 
 //console.log(card);
 
@@ -56,6 +56,7 @@ for (let i = 0; i < posts.length; i++) {
                 </div>
                 <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
                 <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
+                <div id="extra-comment-${i}"></div>
             </div>
         </div>
         
@@ -66,7 +67,7 @@ for (let i = 0; i < posts.length; i++) {
             </div>
             <div id="message-pop" class="message-pop">
                <p>Please enter your comment below</p>
-                <form id="comment-form-${i}">
+                <form class="comment-form" id="comment-form-${i}">
                     <label for="username">Username</label>
                     <input 
                         type="text" 
@@ -92,12 +93,11 @@ for (let i = 0; i < posts.length; i++) {
 /*INCREASE AND DECREASE LIKES TOGGLE THE ICON*/
 
 for (let i = 0; i < posts.length; i++) {
-    let icon = document.getElementById(`heart-${i}`);
-    let likesText = document.getElementById(`likes-para-${i}`);
+    const icon = document.getElementById(`heart-${i}`);
+    const likesText = document.getElementById(`likes-para-${i}`);
     let clicked = false;
-    
-    icon.addEventListener("click", function(){
-        
+
+    icon.addEventListener("click", function () {
         if (!clicked) {
             posts[i].likes++;
             likesText.innerHTML = posts[i].likes + " likes";
@@ -109,69 +109,48 @@ for (let i = 0; i < posts.length; i++) {
             icon.src = "media/icon-heart.png";
             clicked = false;
         }
-        
-        
     });
 }
 
 /*ADD CLICK EVENT TO COMMENT ICON*/
 
-for (let i=0; i < posts.length; i++) {
+for (let i = 0; i < posts.length; i++) {
     const commentBtn = document.getElementById(`comment-${i}`);
-  
-    //console.log(commentBtn)
-    commentBtn.addEventListener("click", function(){
-        document.getElementById(`modal-${i}`).style.display = "inline";
 
+    //console.log(commentBtn)
+    commentBtn.addEventListener("click", function () {
+        document.getElementById(`modal-${i}`).style.display = "inline";
     });
-    
-    
 }
 
 /*CLOSE THE COMMENT BOX*/
 
-for (let i=0; i < posts.length; i++) {
+for (let i = 0; i < posts.length; i++) {
     const closeBtn = document.getElementById(`close-btn-${i}`);
 
-closeBtn.addEventListener("click", function(){
-    
-    document.getElementById(`modal-${i}`).style.display = "none";
-    console.log("clicked");
-});
+    closeBtn.addEventListener("click", function () {
+        document.getElementById(`modal-${i}`).style.display = "none";
+        console.log("clicked");
+    });
 }
-
 
 /*HANDLE SUBMIT COMMENT*/
 
-for (let i=0; i < posts.length; i++) {
-    
-  
-    
+for (let i = 0; i < posts.length; i++) {
     const commentForm = document.getElementById(`comment-form-${i}`);
-    
-    commentForm.addEventListener("submit", function(e){
-    e.preventDefault();});
-                                 
-    
-    const commentFormData = new FormData(commentForm);
-        
-    let name = commentFormData.get(`"username-${i}"`);
-    let userComment = commentFormData.get(`message-${i}`);
-    console.log(name, userComment);
-    
+
+    commentForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const commentFormData = new FormData(commentForm);
+
+        const name = commentFormData.get(`username-${i}`);
+        const userComment = commentFormData.get(`message-${i}`);
+        //console.log(name, userComment);
+
+        const extraComment = document.getElementById(`extra-comment-${i}`);
+        //console.log(extraComment);
+        extraComment.innerHTML = `<p><span class="bold">${name}</span>
+        <span class="mid-txt">${userComment}</span></p>`;
+    });
 }
-
-
-/*
-const commentForm = document.getElementById("comment-form");
-
-//console.log(commentForm)
-
-
-    
-    
-});
-
-*/
-
-
