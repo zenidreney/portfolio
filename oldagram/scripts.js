@@ -57,6 +57,35 @@ for (let i = 0; i < posts.length; i++) {
                 <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
                 <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
             </div>
+        </div>
+        
+        
+        <div class="modal" id="modal-${i}">
+            <div class="close-btn-container">
+                <button class="close-btn" id="close-btn-${i}">X</button>
+            </div>
+            <div id="message-pop" class="message-pop">
+               <p>Please enter your comment below</p>
+                <form id="comment-form">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username-${i}" 
+                        name="username-${i}" 
+                        placeholder="Jane Brown" 
+                        required />
+            
+                    <label for="message">Comment</label>
+                    <textarea
+                        id="message-${i}"
+                        name="message-${i}"
+                        placeholder="I love this post..."
+                        required
+                        
+                    ></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>`;
 }
 
@@ -88,10 +117,12 @@ for (let i = 0; i < posts.length; i++) {
 /*ADD CLICK EVENT TO COMMENT ICON*/
 
 for (let i=0; i < posts.length; i++) {
-    let commentBtn = document.getElementById(`comment-${i}`);
+    const commentBtn = document.getElementById(`comment-${i}`);
+  
     //console.log(commentBtn)
     commentBtn.addEventListener("click", function(){
-        document.getElementById("modal").style.display = "inline";
+        document.getElementById(`modal-${i}`).style.display = "inline";
+
     });
     
     
@@ -99,16 +130,20 @@ for (let i=0; i < posts.length; i++) {
 
 /*CLOSE THE COMMENT BOX*/
 
-const closeBtn = document.getElementById("close-btn");
+for (let i=0; i < posts.length; i++) {
+    const closeBtn = document.getElementById(`close-btn-${i}`);
 
 closeBtn.addEventListener("click", function(){
     
-    document.getElementById("modal").style.display = "none";
+    document.getElementById(`modal-${i}`).style.display = "none";
     console.log("clicked");
 });
+}
+
 
 /*HANDLE SUBMIT COMMENT*/
 
+/*
 const commentForm = document.getElementById("comment-form");
 
 //console.log(commentForm)
@@ -123,5 +158,6 @@ commentForm.addEventListener("submit", function(e){
     
 });
 
+*/
 
 
