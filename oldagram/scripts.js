@@ -23,7 +23,7 @@ const posts = [
         location: "Paris, France",
         avatar: "media/avatar-ducreux.jpg",
         post: "media/post-ducreux.jpg",
-        comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
+        comment: "gm friends! which coin are YOU stacking up today??",
         likes: 152
     }
 ];
@@ -55,8 +55,8 @@ for (let i = 0; i < posts.length; i++) {
                     <img class="icons" src="media/icon-dm.png" alt="" />
                 </div>
                 <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
-                <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
                 <div id="extra-comment-${i}"></div>
+                <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
             </div>
         </div>
         
@@ -152,5 +152,6 @@ for (let i = 0; i < posts.length; i++) {
         //console.log(extraComment);
         extraComment.innerHTML = `<p><span class="bold">${name}</span>
         <span class="mid-txt">${userComment}</span></p>`;
+        document.getElementById(`modal-${i}`).style.display = "none";
     });
 }
