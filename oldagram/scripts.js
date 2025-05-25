@@ -66,7 +66,7 @@ for (let i = 0; i < posts.length; i++) {
             </div>
             <div id="message-pop" class="message-pop">
                <p>Please enter your comment below</p>
-                <form id="comment-form">
+                <form id="comment-form-${i}">
                     <label for="username">Username</label>
                     <input 
                         type="text" 
@@ -143,18 +143,32 @@ closeBtn.addEventListener("click", function(){
 
 /*HANDLE SUBMIT COMMENT*/
 
+for (let i=0; i < posts.length; i++) {
+    
+  
+    
+    const commentForm = document.getElementById(`comment-form-${i}`);
+    
+    commentForm.addEventListener("submit", function(e){
+    e.preventDefault();});
+                                 
+    
+    const commentFormData = new FormData(commentForm);
+        
+    let name = commentFormData.get(`"username-${i}"`);
+    let userComment = commentFormData.get(`message-${i}`);
+    console.log(name, userComment);
+    
+}
+
+
 /*
 const commentForm = document.getElementById("comment-form");
 
 //console.log(commentForm)
 
-commentForm.addEventListener("submit", function(e){
-    e.preventDefault();
+
     
-    const commentFormData = new FormData(commentForm);
-    const name = commentFormData.get("username");
-    const userComment = commentFormData.get("message");
-    //console.log(name, userComment);
     
 });
 
