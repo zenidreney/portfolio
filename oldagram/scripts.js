@@ -1,6 +1,6 @@
 /*SOME DATA TO MAKE THE APP WORK*/
 
-import {posts} from './data.js';
+import { posts } from './data.js';
 
 /*DISPLAYING THE CONTENT BASED ON THE ARRAY FROM THE IMPORT*/
 
