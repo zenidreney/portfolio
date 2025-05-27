@@ -1,38 +1,10 @@
-const posts = [
-    {
-        name: "Vincent van Gogh",
-        username: "vincey1853",
-        location: "Zundert, Netherlands",
-        avatar: "media/avatar-vangogh.jpg",
-        post: "media/post-vangogh.jpg",
-        comment: "everything is whriling!",
-        likes: 21
-    },
-    {
-        name: "Gustave Courbet",
-        username: "gus1819",
-        location: "Ornans, France",
-        avatar: "media/avatar-courbet.jpg",
-        post: "media/post-courbet.jpg",
-        comment: "i'm feelin a bit stressed tbh",
-        likes: 4
-    },
-    {
-        name: "Joseph Ducreux",
-        username: "jd1735",
-        location: "Paris, France",
-        avatar: "media/avatar-ducreux.jpg",
-        post: "media/post-ducreux.jpg",
-        comment: "gm friends! which coin are YOU stacking up today??",
-        likes: 152
-    }
-];
+/*SOME DATA TO MAKE THE APP WORK*/
 
-/*DISPLAYING THE CONTENT BASED ON THE ARRAY*/
+import {posts} from './data.js';
+
+/*DISPLAYING THE CONTENT BASED ON THE ARRAY FROM THE IMPORT*/
 
 const card = document.getElementById("post-container");
-
-//console.log(card);
 
 for (let i = 0; i < posts.length; i++) {
     card.innerHTML += `<div id="post-container" class="card">
@@ -117,7 +89,6 @@ for (let i = 0; i < posts.length; i++) {
 for (let i = 0; i < posts.length; i++) {
     const commentBtn = document.getElementById(`comment-${i}`);
 
-    //console.log(commentBtn)
     commentBtn.addEventListener("click", function () {
         document.getElementById(`modal-${i}`).style.display = "inline";
     });
@@ -146,7 +117,7 @@ for (let i = 0; i < posts.length; i++) {
 
         const name = commentFormData.get(`username-${i}`);
         const userComment = commentFormData.get(`message-${i}`);
-        //console.log(name, userComment);
+        
 
         const extraComment = document.getElementById(`extra-comment-${i}`);
         //console.log(extraComment);
