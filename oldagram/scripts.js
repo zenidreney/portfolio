@@ -1,13 +1,16 @@
 /*SOME DATA TO MAKE THE APP WORK*/
 
-import { posts } from './data.js';
+import { posts } from "./data.js";
 
 /*DISPLAYING THE CONTENT BASED ON THE ARRAY FROM THE IMPORT*/
 
 const card = document.getElementById("post-container");
 
 for (let i = 0; i < posts.length; i++) {
-    card.innerHTML += `<div id="post-container" class="card">
+    card.innerHTML += `
+    
+    <div id="post-container" class="card">
+    
             <div class="card-header">
                 <img class="avatar-img" src=${posts[i].avatar} alt="avatar of the sender of the post." />
                 <div>
@@ -30,13 +33,16 @@ for (let i = 0; i < posts.length; i++) {
                 <div id="extra-comment-${i}"></div>
                 <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
             </div>
+            
         </div>
         
         
         <div class="modal" id="modal-${i}">
+        
             <div class="close-btn-container">
                 <button class="close-btn" id="close-btn-${i}">X</button>
             </div>
+            
             <div id="message-pop" class="message-pop">
                <p>Please enter your comment below</p>
                 <form class="comment-form" id="comment-form-${i}">
@@ -59,8 +65,54 @@ for (let i = 0; i < posts.length; i++) {
                     <button type="submit">Submit</button>
                 </form>
             </div>
-        </div>`;
+            
+        </div>
+        
+        <div class="modal" id="share-modal-${i}">
+        
+            <div class="close-btn-container">
+                <button class="close-btn" id="share-close-btn-${i}">X</button>
+            </div>
+            
+            <div class="message-pop">
+                <p id="share-link-${i}" class="copy" >Copy Page to Clipboard</p>
+            </div>
+        </div>
+        `;
 }
+
+/*MODAL DISPLAY*/
+
+for (let i = 0; i < posts.length; i++) {
+    const commentBtn = document.getElementById(`comment-${i}`);
+    const shareBtn = document.getElementById(`share-btn-${i}`);
+    
+    const closeBtn = document.getElementById(`close-btn-${i}`);
+    const shareCloseBtn = document.getElementById(`share-close-btn-${i}`);
+
+    /*Open Modals*/
+
+    commentBtn.addEventListener("click", function () {
+        document.getElementById(`modal-${i}`).style.display = "inline";
+    });
+
+    shareBtn.addEventListener("click", function () {
+        document.getElementById(`share-modal-${i}`).style.display = "inline";
+    });
+
+    /*Close Modals*/
+
+    closeBtn.addEventListener("click", function () {
+        document.getElementById(`modal-${i}`).style.display = "none";
+    });
+
+    shareCloseBtn.addEventListener("click", function () {
+        document.getElementById(`share-modal-${i}`).style.display = "none";
+    });
+}
+
+
+/*BUTTONS LOGIC*/
 
 /*LIKE BUTTON*/
 
@@ -86,28 +138,8 @@ for (let i = 0; i < posts.length; i++) {
     });
 }
 
+
 /*COMMENT BUTTON*/
-
-/*Open the modal*/
-
-for (let i = 0; i < posts.length; i++) {
-    const commentBtn = document.getElementById(`comment-${i}`);
-
-    commentBtn.addEventListener("click", function () {
-        document.getElementById(`modal-${i}`).style.display = "inline";
-    });
-}
-
-/*Close the Modal*/
-
-for (let i = 0; i < posts.length; i++) {
-    const closeBtn = document.getElementById(`close-btn-${i}`);
-
-    closeBtn.addEventListener("click", function () {
-        document.getElementById(`modal-${i}`).style.display = "none";
-        //console.log("clicked");
-    });
-}
 
 /*Submit and display the comment*/
 
@@ -121,32 +153,34 @@ for (let i = 0; i < posts.length; i++) {
 
         const name = commentFormData.get(`username-${i}`);
         const userComment = commentFormData.get(`message-${i}`);
-        
 
         const extraComment = document.getElementById(`extra-comment-${i}`);
-       
+
         extraComment.innerHTML = `<p><span class="bold">${name}</span>
         <span class="mid-txt">${userComment}</span></p>`;
         document.getElementById(`modal-${i}`).style.display = "none";
-        
+
         /*Clear Input Fields*/
-        
+
         document.getElementById(`username-${i}`).value = "";
         document.getElementById(`message-${i}`).value = "";
     });
 }
 
-/*PLACEHOLDER FOR SHARE BUTTON*/
+/*SHARE BUTTON*/
 
-/*To be added later when I have mastered use of APIs*/
+/*Copy the URL to Clipboard*/
 
-for (let i = 0; i < posts.length; i++){
-    const shareBtn = document.getElementById(`share-btn-${i}`);
+for (let i = 0; i < posts.length; i++) {
     
-    shareBtn.addEventListener("click", function(){
+    const shareLink = document.getElementById(`share-link-${i}`);
+    
+    shareLink.addEventListener("click", function(){
         
-        alert("Functionality to be added with share API, I could have done this with AI but then what would I have learned:)");
+        navigator.clipboard.writeText(window.location.href);
     });
     
+    
+    
+    
 }
-
