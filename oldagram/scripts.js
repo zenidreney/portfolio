@@ -62,7 +62,9 @@ for (let i = 0; i < posts.length; i++) {
         </div>`;
 }
 
-/*INCREASE AND DECREASE LIKES TOGGLE THE ICON*/
+/*LIKE BUTTON*/
+
+/*Increase and decrease likes*/
 
 for (let i = 0; i < posts.length; i++) {
     const icon = document.getElementById(`heart-${i}`);
@@ -84,7 +86,9 @@ for (let i = 0; i < posts.length; i++) {
     });
 }
 
-/*ADD CLICK EVENT TO COMMENT ICON*/
+/*COMMENT BUTTON*/
+
+/*Open the modal*/
 
 for (let i = 0; i < posts.length; i++) {
     const commentBtn = document.getElementById(`comment-${i}`);
@@ -94,7 +98,7 @@ for (let i = 0; i < posts.length; i++) {
     });
 }
 
-/*CLOSE THE COMMENT BOX*/
+/*Close the Modal*/
 
 for (let i = 0; i < posts.length; i++) {
     const closeBtn = document.getElementById(`close-btn-${i}`);
@@ -105,7 +109,7 @@ for (let i = 0; i < posts.length; i++) {
     });
 }
 
-/*HANDLE SUBMIT COMMENT*/
+/*Submit and display the comment*/
 
 for (let i = 0; i < posts.length; i++) {
     const commentForm = document.getElementById(`comment-form-${i}`);
@@ -120,7 +124,7 @@ for (let i = 0; i < posts.length; i++) {
         
 
         const extraComment = document.getElementById(`extra-comment-${i}`);
-        //console.log(extraComment);
+       
         extraComment.innerHTML = `<p><span class="bold">${name}</span>
         <span class="mid-txt">${userComment}</span></p>`;
         document.getElementById(`modal-${i}`).style.display = "none";
@@ -131,3 +135,5 @@ for (let i = 0; i < posts.length; i++) {
         document.getElementById(`message-${i}`).value = "";
     });
 }
+
+
