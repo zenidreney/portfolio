@@ -124,5 +124,10 @@ for (let i = 0; i < posts.length; i++) {
         extraComment.innerHTML = `<p><span class="bold">${name}</span>
         <span class="mid-txt">${userComment}</span></p>`;
         document.getElementById(`modal-${i}`).style.display = "none";
+        
+        /*Clear Input Fields*/
+        
+        document.getElementById(`username-${i}`).value = "";
+        document.getElementById(`message-${i}`).value = "";
     });
 }
