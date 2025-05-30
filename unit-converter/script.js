@@ -6,13 +6,11 @@
 1 kilogram = 2.204 pound
 */
 
-let button = document.getElementById("input-btn");
-let inputEl = document.getElementById("input-field");
-let lengthEl = document.getElementById("length-output");
-let volumeEl = document.getElementById("volume-output");
-let massEl = document.getElementById("mass-output");
-
-console.log(lengthEl);
+const button = document.getElementById("input-btn");
+const inputEl = document.getElementById("input-field");
+const lengthEl = document.getElementById("length-output");
+const volumeEl = document.getElementById("volume-output");
+const massEl = document.getElementById("mass-output");
 
 button.addEventListener("click", function () {
     const value = inputEl.value;
@@ -33,8 +31,6 @@ button.addEventListener("click", function () {
     massEl.innerHTML = `
     <p id="mass-output">${value} kilos = ${kilostopounds.toFixed(3)} pounds | ${value} pounds = ${poundstokilos.toFixed(3)} kilos</p>
     `;
-
-    console.log(metertofeets);
 });
 
 // TOGGLE BUTTON FUNCTION
