@@ -24,7 +24,7 @@ for (let i = 0; i < posts.length; i++) {
                 <div class="icon-btns">
                     <img id="heart-${i}" class="icons" src="media/icon-heart.png" alt="" />
                     <img id="comment-${i}" class="icons" src="media/icon-comment.png" alt="" />
-                    <img class="icons" src="media/icon-dm.png" alt="" />
+                    <img id="share-btn-${i}" class="icons" src="media/icon-dm.png" alt="" />
                 </div>
                 <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
                 <div id="extra-comment-${i}"></div>
@@ -136,4 +136,17 @@ for (let i = 0; i < posts.length; i++) {
     });
 }
 
+/*PLACEHOLDER FOR SHARE BUTTON*/
+
+/*To be added later when I have mastered use of APIs*/
+
+for (let i = 0; i < posts.length; i++){
+    const shareBtn = document.getElementById(`share-btn-${i}`);
+    
+    shareBtn.addEventListener("click", function(){
+        
+        alert("Functionality to be added with share API, I could have done this with AI but then what would I have learned:)");
+    });
+    
+}
 
