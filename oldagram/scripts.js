@@ -39,7 +39,7 @@ for (let i = 0; i < posts.length; i++) {
         
         <div class="modal" id="modal-${i}">
         
-            <div class="close-btn-container">
+            <div id="close-btn-container-${i}" class="close-btn-container">
                 <button class="close-btn" id="close-btn-${i}">X</button>
             </div>
             
@@ -75,7 +75,7 @@ for (let i = 0; i < posts.length; i++) {
             </div>
             
             <div class="message-pop">
-                <p id="share-link-${i}" class="copy" >Copy Page to Clipboard</p>
+                <p id="share-link-${i}" class="copy">Copy Page Link to Clipboard</p>
             </div>
         </div>
         `;
@@ -86,31 +86,49 @@ for (let i = 0; i < posts.length; i++) {
 for (let i = 0; i < posts.length; i++) {
     const commentBtn = document.getElementById(`comment-${i}`);
     const shareBtn = document.getElementById(`share-btn-${i}`);
-    
+
     const closeBtn = document.getElementById(`close-btn-${i}`);
     const shareCloseBtn = document.getElementById(`share-close-btn-${i}`);
 
     /*Open Modals*/
 
-    commentBtn.addEventListener("click", function () {
+    commentBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+
         document.getElementById(`modal-${i}`).style.display = "inline";
     });
 
-    shareBtn.addEventListener("click", function () {
+    shareBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
         document.getElementById(`share-modal-${i}`).style.display = "inline";
     });
 
     /*Close Modals*/
 
+    const modal = document.getElementById(`modal-${i}`);
+    const shareModal = document.getElementById(`share-modal-${i}`);
+
+    modal.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+
+    shareModal.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+
+    document.body.addEventListener("click", function () {
+        modal.style.display = "none";
+        shareModal.style.display = "none";
+    });
+
     closeBtn.addEventListener("click", function () {
-        document.getElementById(`modal-${i}`).style.display = "none";
+        modal.style.display = "none";
     });
 
     shareCloseBtn.addEventListener("click", function () {
         document.getElementById(`share-modal-${i}`).style.display = "none";
     });
 }
-
 
 /*BUTTONS LOGIC*/
 
@@ -137,7 +155,6 @@ for (let i = 0; i < posts.length; i++) {
         }
     });
 }
-
 
 /*COMMENT BUTTON*/
 
@@ -172,15 +189,10 @@ for (let i = 0; i < posts.length; i++) {
 /*Copy the URL to Clipboard*/
 
 for (let i = 0; i < posts.length; i++) {
-    
     const shareLink = document.getElementById(`share-link-${i}`);
-    
-    shareLink.addEventListener("click", function(){
-        
+
+    shareLink.addEventListener("click", function () {
         navigator.clipboard.writeText(window.location.href);
+        alert("Copied to Clipboard");
     });
-    
-    
-    
-    
 }
