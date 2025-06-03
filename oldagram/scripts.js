@@ -90,43 +90,38 @@ for (let i = 0; i < posts.length; i++) {
     const closeBtn = document.getElementById(`close-btn-${i}`);
     const shareCloseBtn = document.getElementById(`share-close-btn-${i}`);
 
-    /*Open Modals*/
-
-    commentBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-
-        document.getElementById(`modal-${i}`).style.display = "inline";
-    });
-
-    shareBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        document.getElementById(`share-modal-${i}`).style.display = "inline";
-    });
-
-    /*Close Modals*/
-
     const modal = document.getElementById(`modal-${i}`);
     const shareModal = document.getElementById(`share-modal-${i}`);
 
+    /*OPEN THE MODALS*/
+    document.addEventListener("click", function (e) {
+        /*First reset so that the click event triggers open.
+         This will also ensure that the modal closes when clcked outside*/
+        modal.style.display = "none";
+        shareModal.style.display = "none";
+
+        if (e.target === commentBtn) {
+            modal.style.display = "inline";
+        } else if (e.target === shareBtn) {
+            shareModal.style.display = "inline";
+        }
+    });
+    /*CLOSE THE MODALS*/
+
     modal.addEventListener("click", function (e) {
         e.stopPropagation();
+
+        if (e.target === closeBtn) {
+            modal.style.display = "none";
+        }
     });
 
     shareModal.addEventListener("click", function (e) {
         e.stopPropagation();
-    });
 
-    document.body.addEventListener("click", function () {
-        modal.style.display = "none";
-        shareModal.style.display = "none";
-    });
-
-    closeBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    shareCloseBtn.addEventListener("click", function () {
-        document.getElementById(`share-modal-${i}`).style.display = "none";
+        if (e.target === shareCloseBtn) {
+            shareModal.style.display = "none";
+        }
     });
 }
 
