@@ -4,12 +4,12 @@ export function renderCards(card, posts) {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
 
-       /*  --- Post Container ---*/
+       /*  POST CONTAINER */
         const postContainer = document.createElement("div");
         postContainer.id = "post-container";
         postContainer.className = "card";
 
-       /*  --- Header ---*/
+       /*  Header */
             const cardHeader = document.createElement("div");
             cardHeader.className = "card-header";
 
@@ -37,7 +37,7 @@ export function renderCards(card, posts) {
             cardHeader.append(avatarImg, headerContainer);
             //cardHeader.appendChild(headerContainer);
         
-        /*Image*/
+        /* Image */
             
             const postImageContainer = document.createElement("div");
                 const postImg = document.createElement("img");
@@ -45,7 +45,7 @@ export function renderCards(card, posts) {
                 postImg.src = post.post;
             postImageContainer.appendChild(postImg);
             
-        /*Buttons Container*/
+        /* Buttons Container */
         
             const btnsContainer = document.createElement("div");
             btnsContainer.className ="btns-container";
@@ -89,7 +89,7 @@ export function renderCards(card, posts) {
         
         postContainer.append(cardHeader, postImageContainer, btnsContainer);
         
-        /*Modal for Comment Btn*/
+        /*MODAL FOR COMMENT BUTTON*/
         
         const commentModal = document.createElement("div");
         commentModal.className = "modal";
@@ -97,7 +97,6 @@ export function renderCards(card, posts) {
             
             const closeBtnContainer = document.createElement("div");
             closeBtnContainer.className = "close-btn-container";
-            closeBtnContainer.id = `close-btn-${i}`;
                 const closeBtn = document.createElement("button");
                 closeBtn.className = "close-btn";
                 closeBtn.id = `close-btn-${i}`;
@@ -147,7 +146,7 @@ export function renderCards(card, posts) {
         
         commentModal.append(closeBtnContainer, messagePop);
         
-            /*Modal for Share Button*/
+            /*MODAL FOR SHARE BUTTON*/
         
         const shareModal = document.createElement("div");
         shareModal.id = `share-modal-${i}`;
