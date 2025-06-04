@@ -100,13 +100,20 @@ body {
 }
 
 .copy {
-    font-size: 2rem;
+    font-size: 1.25rem;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    background-color: whitesmoke;
     cursor: pointer;
-    text-decoration: underline;
+    /*text-decoration: none;*/
+    text-align: center;
 }
 
-.copy:hover {
+.copy:hover,
+.copy:focus {
     color: blue;
+    text-decoration: underline;
+    opacity: 0.5;
 }
 
 /*MEDIA QUERIES*/
