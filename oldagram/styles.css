@@ -92,6 +92,12 @@ body {
 .close-btn {
     color: darkmagenta;
     font-weight: 800;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus{
+    opacity: 0.5;
 }
 
 .comment-form {
