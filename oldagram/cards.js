@@ -2,14 +2,13 @@
 
 import { renderModal, renderShareModal } from "./modals.js";
 
-
-export function renderCards(card, posts) {
-    for (let i = 0; i < posts.length; i++) {
+export function renderCards(containerDiv, postsArray) {
+    for (let i = 0; i < postsArray.length; i++) {
         
         const shareModal = renderShareModal(i);
         const commentModal = renderModal(i);
         
-        const post = posts[i];
+        const post = postsArray[i];
 
        /*  POST CONTAINER */
         const postContainer = document.createElement("div");
@@ -98,7 +97,7 @@ export function renderCards(card, posts) {
 
         /*APPEND ALL ELEMENTS TO THE CARDS*/
         
-        card.append(postContainer, commentModal, shareModal); 
+        containerDiv.append(postContainer, commentModal, shareModal); 
     }
 }
 

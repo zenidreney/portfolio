@@ -5,8 +5,8 @@ import { renderCards } from "./cards.js";
 
 /*DISPLAYING THE CONTENT BASED ON THE ARRAY FROM THE IMPORT*/
 
-const card = document.getElementById("post-container");
-renderCards(card, posts);
+const postContainer = document.getElementById("post-container");
+renderCards(postContainer, posts);
 
 /*MODAL DISPLAY*/
 

@@ -1,6 +1,7 @@
+    /*MODAL FOR COMMENT BUTTON*/
+
 export function renderModal(i){
     
-    /*MODAL FOR COMMENT BUTTON*/
         
         const commentModal = document.createElement("div");
         commentModal.className = "modal";
@@ -60,10 +61,10 @@ export function renderModal(i){
     
         return commentModal;
 }
+            /*MODAL FOR SHARE BUTTON*/
     
     export function renderShareModal(i) {
         
-            /*MODAL FOR SHARE BUTTON*/
         
         const shareModal = document.createElement("div");
         shareModal.id = `share-modal-${i}`;
