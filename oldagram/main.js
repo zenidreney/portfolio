@@ -11,11 +11,11 @@ renderCards(postContainer, posts);
 /*MODAL DISPLAY*/
 
 for (let i = 0; i < posts.length; i++) {
-    const commentBtn = document.getElementById(`comment-${i}`);
-    const shareBtn = document.getElementById(`share-btn-${i}`);
+    //const commentBtn = document.getElementById(`comment-${i}`);
+    //const shareBtn = document.getElementById(`share-btn-${i}`);
 
-    const closeBtn = document.getElementById(`close-btn-${i}`);
-    const shareCloseBtn = document.getElementById(`share-close-btn-${i}`);
+    //const closeBtn = document.getElementById(`close-btn-${i}`);
+    //const shareCloseBtn = document.getElementById(`share-close-btn-${i}`);
 
     const modal = document.getElementById(`modal-${i}`);
     const shareModal = document.getElementById(`share-modal-${i}`);
@@ -27,9 +27,9 @@ for (let i = 0; i < posts.length; i++) {
         modal.style.display = "none";
         shareModal.style.display = "none";
 
-        if (e.target === commentBtn) {
+        if (e.target.id === `comment-${i}`) {
             modal.style.display = "inline";
-        } else if (e.target === shareBtn) {
+        } else if (e.target.id === `share-btn-${i}`) {
             shareModal.style.display = "inline";
         }
     });
@@ -38,7 +38,7 @@ for (let i = 0; i < posts.length; i++) {
     modal.addEventListener("click", function (e) {
         e.stopPropagation();
 
-        if (e.target === closeBtn) {
+        if (e.target.id === `close-btn-${i}`) {
             modal.style.display = "none";
         }
     });
@@ -46,7 +46,7 @@ for (let i = 0; i < posts.length; i++) {
     shareModal.addEventListener("click", function (e) {
         e.stopPropagation();
 
-        if (e.target === shareCloseBtn) {
+        if (e.target.id === `share-close-btn-${i}`) {
             shareModal.style.display = "none";
         }
     });
