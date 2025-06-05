@@ -1,7 +1,8 @@
-    /*MODAL FOR COMMENT BUTTON*/
+/*There are 2 modales in this module*/
+
+/* 1) MODAL FOR COMMENT BUTTON*/
 
 export function renderModal(i){
-    
         
         const commentModal = document.createElement("div");
         commentModal.className = "modal";
@@ -58,13 +59,12 @@ export function renderModal(i){
         
         commentModal.append(closeBtnContainer, messagePop);
     
-    
         return commentModal;
 }
-            /*MODAL FOR SHARE BUTTON*/
+
+/* 2) MODAL FOR SHARE BUTTON*/
     
     export function renderShareModal(i) {
-        
         
         const shareModal = document.createElement("div");
         shareModal.id = `share-modal-${i}`;
@@ -90,10 +90,7 @@ export function renderModal(i){
         
             messagePopContainer.append(shareLink);
         
-        
-        
         shareModal.append(shareCloseBtnContainer, messagePopContainer);
     
     return shareModal;
-    
 }

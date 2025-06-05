@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="styles.css">
+
+<div id="post-container" class="card">
+    
+            <div class="card-header">
+                <img class="avatar-img" src=${posts[i].avatar} alt="avatar of the sender of the post." />
+                <div>
+                    <div><span class="bold">${posts[i].name}</span></div>
+                    <span class="location">${posts[i].location}</span>
+                </div>
+            </div>
+
+            <div>
+                <img class="image" src=${posts[i].post} />
+            </div>
+
+            <div class="btns-container">
+                <div class="icon-btns">
+                    <img id="heart-${i}" class="icons" src="media/icon-heart.png" alt="" />
+                    <img id="comment-${i}" class="icons" src="media/icon-comment.png" alt="" />
+                    <img id="share-btn-${i}" class="icons" src="media/icon-dm.png" alt="" />
+                </div>
+                <p id="likes-para-${i}" class="bold">${posts[i].likes} likes</p>
+                <div id="extra-comment-${i}"></div>
+                <p><span class="bold">${posts[i].username}</span> <span class="mid-txt">${posts[i].comment} </span></p>
+            </div>
+            
+</div>
+
+

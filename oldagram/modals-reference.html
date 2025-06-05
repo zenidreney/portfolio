@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="styles.css">
+
+   <div class="modal" id="modal-${i}">
+       <div id="close-btn-container-${i}" class="close-btn-container">
+           <button class="close-btn" id="close-btn-${i}">X</button>
+       </div>
+
+       <div id="message-pop" class="message-pop">
+           <p>Please enter your comment below</p>
+           <form class="comment-form" id="comment-form-${i}">
+               <label for="username">Username</label>
+               <input type="text" id="username-${i}" name="username-${i}" placeholder="Jane Brown" required />
+
+               <label for="message">Comment</label>
+               <textarea id="message-${i}" name="message-${i}" placeholder="I love this post..." required></textarea>
+               <button type="submit">Submit</button>
+           </form>
+       </div>
+   </div>
+
+<div class="modal" id="share-modal-${i}">
+    <div class="close-btn-container">
+        <button class="close-btn" id="share-close-btn-${i}">X</button>
+    </div>
+
+    <div class="message-pop">
+        <p id="share-link-${i}" class="copy">Copy Page Link to Clipboard</p>
+    </div>
+</div>

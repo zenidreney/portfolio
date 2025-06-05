@@ -1,7 +1,7 @@
 /*SOME DATA TO MAKE THE APP WORK*/
 
 import { posts } from "./data.js";
-import { renderCards } from "./cards.js";
+import { renderCards } from "./cards-render.js";
 
 /*DISPLAYING THE CONTENT BASED ON THE ARRAY FROM THE IMPORT*/
 
