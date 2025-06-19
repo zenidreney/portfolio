@@ -44,7 +44,7 @@ p {
 
 a {
     color: #BC4749;
-    text-decoration: underline dotted; 
+    text-decoration: underline solid; 
 }
 
 a:hover, 
