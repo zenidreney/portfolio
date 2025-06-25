@@ -32,7 +32,7 @@ a {
     text-decoration: none;
     font-size: 1rem;
     color: #386641;
-    margin-top: 1em;
+    margin: 1em 0 0.5em;
 }
 
 
@@ -114,7 +114,7 @@ a {
 }
 
 .img-main {
-    width: 120px;
+    width: 240px;
     border-radius: 50%;
 }
 
