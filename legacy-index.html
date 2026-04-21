@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Deniz Yener's Portfolio</title>
+    <link rel="icon" href="media/zenidlogospace.png" />
+
+    <!--Google Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet" />
+
+    <!--Bootstrap CSS-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+
+    <!--Custom CSS -- All custom classes are namespaced with "-c-" -->
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-----------------------LANDING SECTION------------------>
+
+    <header class="logo-card-c-container">
+        <div class="nav-item-c-container">
+            <h1>Deniz Yener</h1>
+            <h2>Front-End Dev</h2>
+        </div>
+        <div class="nav-c-container">
+            <a href="https://linkedin.com/in/zenid"><img class="logo" src="media/InBug-Black.png" alt="" /></a>
+            <a href="https://profile.codersrank.io/user/zenidreney/"><img class="logo" src="media/codersrank.svg"
+                    alt="" /></a>
+            <a href="https://github.com/zenidreney/"><img class="logo" src="media/github-mark.png" alt="" /></a>
+        </div>
+    </header>
+
+    <!----------FEATURED PROJECTS SECTION---------->
+
+    <section id="landing" role="banner" aria-label="Featured Projects">
+        <div class="c-container">
+            <div class="top-item">
+                <!--to create responsive space in CSS-->
+            </div>
+
+            <div class="mid-item">
+                <p class="text-white mb-2">Featured Projects</p>
+                <div id="feat-carousel" class="carousel slide" data-bs-ride="false">
+                    <p class="text-white mb-2">LOADING...</p>
+                    <!--Dynamic Carousel Content form latestData through renderCarousel-->
+                </div>
+            </div>
+
+            <div class="low-item">
+                <nav aria-label="Site Navigation.">
+                    <ul>
+                        <li>
+                            <a class="c-btn c-btn-top c-btn-skewright" href="#latest">Latest Projects</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-filter c-btn-skewleft" href="./all-projects.html">Filter Projects</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-all c-btn-skewright" href="https://about-zenid.netlify.app">About</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-about c-btn-skewleft" href="mailto:zenid@tuta.io">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!----------LATEST PROJECTS SECTION---------->
+
+    <section id="latest" role="region" aria-label="Latest Projects">
+        <div class="c-container">
+            <div class="top-item">
+                <!--to create responsive space in CSS-->
+            </div>
+
+            <div class="mid-item">
+                <p class="text-white mb-2">Latest Projects</p>
+                <div id="latest-carousel">
+                    <p class="text-white mb-2">LOADING...</p>
+                    <!--Dynamic carousel from featuredData through renderCarousel -->
+                </div>
+            </div>
+
+            <div class="low-item">
+                <nav aria-label="Site Navigation.">
+                    <ul>
+                        <li>
+                            <a class="c-btn c-btn-top c-btn-skewright" href="#older">Older Projects</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-filter c-btn-skewleft" href="./all-projects.html">Filter Projects</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-all c-btn-skewright" href="https://about-zenid.netlify.app">About</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-about c-btn-skewleft" href="mailto:zenid@tuta.io">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!----------OLDER PROJECTS SECTION---------->
+
+    <section id="older" role="region" aria-label="Older Projects">
+        <div class="c-container">
+            <div class="top-item">
+                <!--to create responsive space in CSS-->
+            </div>
+
+            <div class="mid-item">
+                <p class="text-white mb-2">Older Projects</p>
+                <div id="older-carousel">
+                    <p class="text-white mb-2">LOADING...</p>
+                    <!--Dynamic carousel from featuredData through renderCarousel -->
+                </div>
+            </div>
+
+            <div class="low-item">
+                <nav aria-label="Site Navigation.">
+                    <ul>
+                        <li>
+                            <a class="c-btn c-btn-top c-btn-skewright" href="#landing">Featured Projects</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-filter c-btn-skewleft" href="./all-projects.html">Filter Projects</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-all c-btn-skewright" href="https://about-zenid.netlify.app">About</a>
+                        </li>
+                        <li>
+                            <a class="c-btn c-btn-about c-btn-skewleft" href="mailto:zenid@tuta.io">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!--Bootstrap JS-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!--Vanilla JS-->
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
